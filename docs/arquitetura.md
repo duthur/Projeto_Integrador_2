@@ -7,20 +7,26 @@ graph TD
     User[Estudante / Usuário] -->|Interage com a Interface| UI[Interface Web - HTML/CSS]
     UI -->|Eventos / Manipulação do DOM| JS[Lógica da Aplicação - JavaScript]
     JS -->|Grava / Lê Dados| LS[(LocalStorage - Navegador)]
+
+## 2. Diagrama de Fluxo do Usuário (User Flow)
+O fluxo do usuário no **PieHub** descreve os caminhos que o estudante percorre ao interagir com a aplicação:
+
+```mermaid
 flowchart TD
-    Inicio([Início]) --> Acessa[Acessar o PieHub no Navegador]
-    Acessa --> Carrega[Carregar Dados do LocalStorage]
-    Carrega --> Exibe[Exibir Dashboard e Tarefas Cadastradas]
+    Inicio([Acesso ao PieHub]) --> CarregaLS[Carregar Dados Salvos no LocalStorage]
+    CarregaLS --> Dashboard[Exibir Painel com Tarefas e Horários]
     
-    Exibe --> Acao{Escolha da Ação}
+    Dashboard --> Acao{O que o usuário deseja fazer?}
     
-    Acao -->|Adicionar Tarefa| Form[Preencher Nome, Disciplina, Data e Prioridade]
-    Form --> SalvaJS[Processar pelo JS]
-    SalvaJS --> SalvaLS[Atualizar LocalStorage]
-    SalvaLS --> Exibe
+    Acao -->|Nova Tarefa| Form[Preencher Formulário: Título, Disciplina, Data e Prioridade]
+    Form --> AddJS[Adicionar Tarefa na Lista]
     
-    Acao -->|Concluir/Excluir| Modifica[Alterar Status ou Excluir]
-    Modifica --> SalvaLS
+    Acao -->|Gerenciar Tarefa| Status[Alternar Status: Pendente / Concluída ou Excluir]
     
-    Acao -->|Anotações/Horários| EditaNotas[Atualizar Bloco de Anotações]
-    EditaNotas --> SalvaLS
+    Acao -->|Editar Bloco/Horário| Notas[Atualizar Anotações e Horário de Aulas]
+    
+    AddJS --> SalvaLS[Salvar Atualizações no LocalStorage]
+    Status --> SalvaLS
+    Notas --> SalvaLS
+    
+    SalvaLS --> Dashboard
