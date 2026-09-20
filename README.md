@@ -1,15 +1,30 @@
-# PieHub - Painel Integrado do Estudante
+# 📱 EcoTerminal Escolar
 
-## 1. Descrição do Problema
-Estudantes de ensino integral frequentemente enfrentam dificuldades para organizar prazos de trabalhos, acompanhar avisos de auxílios estudantis e gerenciar rotinas de estudo em uma única plataforma simples. A descentralização das informações gera perda de prazos e desorganização diária.
+> Sistema de terminal de chamados operacionais e comunicação rápida para salas de aula, utilizando dispositivos móveis reaproveitados.
 
-## 2. Solução Proposta
-Uma aplicação web (dashboard) onde o estudante pode definir suas tarefas por disciplina, controlar prazos de entregas com status dinâmicos, organizar quadros de horários de aulas e manter anotações importantes personalizadas diretamente no navegador.
+---
 
-## 3. Tecnologias Utilizadas
-* **Front-end**: HTML5, CSS3 (com Flexbox/Grid) e JavaScript (ES6)
-* **Armazenamento Local**: LocalStorage da Web API para persistência de dados do usuário
-* **Versionamento**: Git e GitHub
+## 🚀 Sobre o Projeto
+O **EcoTerminal Escolar** transforma celulares antigos em terminais fixos (Modo Kiosk) instalados nas salas de aula. Através de uma rede local Wi-Fi, professores e monitores acionam chamados de suporte técnico, limpeza, trocas de aula ou emergências diretamente para o painel da diretoria.
 
-## 4. Realização
-* Arthur Duarte Nascimento
+---
+
+## 🛠️ Tecnologias Utilizadas
+- **Front-end (Terminal & Painel):** HTML5, CSS3, JavaScript (ES6)
+- **Back-end:** Node.js, Express, WebSockets
+- **Banco de Dados:** SQLite / LocalStorage (Logs locais)
+- **Modelagem & Gestão:** Mermaid.js, Trello (Kanban)
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### Pré-requisitos
+- Node.js instalado (versão 18 ou superior)
+- Dispositivos conectados na mesma rede Wi-Fi local
+
+### Passo a Passo
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone [https://github.com/me726960-tech/Projeto-Integrador-II.git](https://github.com/me726960-tech/Projeto-Integrador-II.git)
