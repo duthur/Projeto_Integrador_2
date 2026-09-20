@@ -25,6 +25,23 @@ O **EcoTerminal Escolar** transforma celulares antigos em terminais fixos (Modo 
 
 ### Passo a Passo
 
-1. **Clonar o repositório:**
+1. Clonar o repositório:
    ```bash
    git clone [https://github.com/me726960-tech/Projeto-Integrador-II.git](https://github.com/me726960-tech/Projeto-Integrador-II.git)
+   
+2. Acessar a pasta da aplicação:
+
+Bash
+cd Projeto-Integrador-II/src
+
+3. Instalar as dependências e iniciar o servidor:
+
+Bash
+npm install
+npm start
+
+4. Acessar as interfaces no navegador:
+
+Terminal da Sala: http://localhost:3000/terminal
+
+Painel da Diretoria: http://localhost:3000/admin
